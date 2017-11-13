@@ -25,6 +25,9 @@ module.exports = function(grunt) {
                                    'rerunning when files change.',
                      ['karma:watch']);
 
+  grunt.registerTask('test:func', 'Build and run the functional tests.',
+                     ['clean', 'webpack:build', 'jasmine_nodejs']);
+
   grunt.registerTask('sign', 'Build and sign the webextension.',
                      ['build', 'shell:webextSign']);
 
@@ -33,6 +36,7 @@ module.exports = function(grunt) {
   grunt.config('webpack', require('./grunt/webpack'));
   grunt.config('eslint', require('./grunt/eslint'));
   grunt.config('karma', require('./grunt/karma'));
+  grunt.config('jasmine_nodejs', require('./grunt/jasmine_nodejs'));
 
   grunt.config('concurrent', {
     // Run webpack in watch mode alongside webext run
