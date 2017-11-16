@@ -1,24 +1,13 @@
-require('geckodriver');
-const {Builder, By, until} = require('selenium-webdriver');
-const firefox = require('selenium-webdriver/firefox');
-const firefoxBinary = require('./helpers/firefox_binary');
+const {until} = require('selenium-webdriver');
+const {buildAddonDriver, ADDON_FILE} = require('./helpers/addon_driver');
+const {TOOLBAR_BUTTON} = require('./helpers/toolbar');
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
 
 describe('Popup', function() {
-  beforeEach(function() {
-    const options = new firefox.Options();
-
-    if (firefoxBinary) {
-      options.setBinary(firefoxBinary);
-    }
-
-    this.driver = new Builder()
-      .forBrowser('firefox')
-      .setFirefoxOptions(options)
-      .build();
-
-    this.driver.setContext(firefox.Context.CHROME);
+  beforeEach(async function() {
+    this.driver = buildAddonDriver();
+    await this.driver.installAddon(ADDON_FILE, true);
   });
 
   afterEach(function() {
@@ -26,9 +15,7 @@ describe('Popup', function() {
   });
 
   it('should have a toolbar button', async function() {
-    await this.driver.installAddon('dist/update_scanner-4.0.0.zip', true);
-    const button = await this.driver.wait(until.elementLocated(
-      By.id('_c07d1a49-9894-49ff-a594-38960ede8fb9_-browser-action')));
+    const button = await this.driver.wait(until.elementLocated(TOOLBAR_BUTTON));
 
     expect(await button.getAttribute('tooltiptext')).toEqual('Update Scanner');
   });
