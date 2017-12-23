@@ -960,9 +960,9 @@
       }
     },
     "chardet": {
-      "version": "0.4.0",
-      "resolved": "https://registry.npmjs.org/chardet/-/chardet-0.4.0.tgz",
-      "integrity": "sha1-C74TVaxE16PtSpJXB8TvcPgZD2w=",
+      "version": "0.4.2",
+      "resolved": "https://registry.npmjs.org/chardet/-/chardet-0.4.2.tgz",
+      "integrity": "sha1-tUc7M9yXxCTl2Y3IfVXU2KKci/I=",
       "dev": true
     },
     "chokidar": {
@@ -2128,12 +2128,12 @@
       }
     },
     "eslint": {
-      "version": "4.12.0",
-      "resolved": "https://registry.npmjs.org/eslint/-/eslint-4.12.0.tgz",
-      "integrity": "sha512-Ohv4NU0FffkEe4so8DBrdfRUbGUtM4XnBTDll2pY7OdW3VkjBOZPerx3Bmuhg6S6D6r8+cli0EezN0xawUfYwg==",
+      "version": "4.14.0",
+      "resolved": "https://registry.npmjs.org/eslint/-/eslint-4.14.0.tgz",
+      "integrity": "sha512-Ul6CSGRjKscEyg0X/EeNs7o2XdnbTEOD1OM8cTjmx85RPcBJQrEhZLevhuJZNAE/vS2iVl5Uhgiqf3h5uLMCJQ==",
       "dev": true,
       "requires": {
-        "ajv": "5.5.0",
+        "ajv": "5.5.2",
         "babel-code-frame": "6.22.0",
         "chalk": "2.3.0",
         "concat-stream": "1.6.0",
@@ -2141,14 +2141,14 @@
         "debug": "3.1.0",
         "doctrine": "2.0.2",
         "eslint-scope": "3.7.1",
+        "eslint-visitor-keys": "1.0.0",
         "espree": "3.5.2",
         "esquery": "1.0.0",
-        "estraverse": "4.2.0",
         "esutils": "2.0.2",
         "file-entry-cache": "2.0.0",
         "functional-red-black-tree": "1.0.1",
         "glob": "7.1.2",
-        "globals": "11.0.1",
+        "globals": "11.1.0",
         "ignore": "3.3.5",
         "imurmurhash": "0.1.4",
         "inquirer": "3.3.0",
@@ -2179,9 +2179,9 @@
           "dev": true
         },
         "ajv": {
-          "version": "5.5.0",
-          "resolved": "https://registry.npmjs.org/ajv/-/ajv-5.5.0.tgz",
-          "integrity": "sha1-6yhAdG6dxIvV4GOjbj/UAMXqtak=",
+          "version": "5.5.2",
+          "resolved": "https://registry.npmjs.org/ajv/-/ajv-5.5.2.tgz",
+          "integrity": "sha1-c7Xuyj+rZT49P5Qis0GtQiBdyWU=",
           "dev": true,
           "requires": {
             "co": "4.6.0",
@@ -2242,9 +2242,9 @@
           "dev": true
         },
         "globals": {
-          "version": "11.0.1",
-          "resolved": "https://registry.npmjs.org/globals/-/globals-11.0.1.tgz",
-          "integrity": "sha1-Eqh7sBDlFUOWrMU14eQ/x1Ow5eg=",
+          "version": "11.1.0",
+          "resolved": "https://registry.npmjs.org/globals/-/globals-11.1.0.tgz",
+          "integrity": "sha512-uEuWt9mqTlPDwSqi+sHjD4nWU/1N+q0fiWI9T1mZpD2UENqX20CFD5T/ziLZvztPaBKl7ZylUi1q6Qfm7E2CiQ==",
           "dev": true
         },
         "has-flag": {
@@ -2314,6 +2314,12 @@
         "esrecurse": "4.2.0",
         "estraverse": "4.2.0"
       }
+    },
+    "eslint-visitor-keys": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz",
+      "integrity": "sha512-qzm/XxIbxm/FHyH341ZrbnMUpe+5Bocte9xkmFMzPMjRaZMcXww+MpBptFvtU+79L362nqiLhekCxCxDPaUMBQ==",
+      "dev": true
     },
     "espree": {
       "version": "3.5.1",
@@ -2606,7 +2612,7 @@
       "integrity": "sha512-E44iT5QVOUJBKij4IIV3uvxuNlbKS38Tw1HiupxEIHPv9qtC2PrDYohbXV5U+1jnfIXttny8gUhj+oZvflFlzA==",
       "dev": true,
       "requires": {
-        "chardet": "0.4.0",
+        "chardet": "0.4.2",
         "iconv-lite": "0.4.17",
         "tmp": "0.0.33"
       }
@@ -2669,6 +2675,11 @@
       "requires": {
         "escape-string-regexp": "1.0.5"
       }
+    },
+    "file-dialog": {
+      "version": "0.0.7",
+      "resolved": "https://registry.npmjs.org/file-dialog/-/file-dialog-0.0.7.tgz",
+      "integrity": "sha512-eRo8DZbV7G0ADtaUPvGAb5ZXB+jN1ehVeYanIHDt2wEokjiXTy5kzMvtiPw4nEtt08IxJqqMeeFZNP34XLNjRw=="
     },
     "file-entry-cache": {
       "version": "2.0.0",
@@ -3273,7 +3284,7 @@
       "dev": true,
       "requires": {
         "chalk": "2.1.0",
-        "eslint": "4.12.0"
+        "eslint": "4.14.0"
       },
       "dependencies": {
         "ansi-styles": {
